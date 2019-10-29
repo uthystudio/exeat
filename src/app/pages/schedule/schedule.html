@@ -1,0 +1,305 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Exeats Generator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides>
+    <ion-slide>
+      <form>
+        <ion-title>Weekend Exeat</ion-title>
+        <ion-list #scheduleList>
+    <ion-item-group>
+      <ion-item-divider sticky>
+        <ion-label>
+          About student
+        </ion-label>
+      </ion-item-divider>
+
+      <ion-item-sliding #slidingItem >
+        <ion-list lines="full" class="ion-no-margin ion-no-padding">
+          <ion-item>
+            <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input autocomplete="on" required type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">Last Name</ion-label>
+            <ion-input autocomplete="on" required type="text"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label position="stacked">House</ion-label>
+            <ion-select required>
+              <ion-select-option>House 1</ion-select-option>
+              <ion-select-option>House 2</ion-select-option>
+              <ion-select-option>House 3</ion-select-option>
+              <ion-select-option>House 4</ion-select-option>
+              <ion-select-option>House 5</ion-select-option>
+              <ion-select-option>House 6</ion-select-option>
+              <ion-select-option>House 7</ion-select-option>
+              <ion-select-option>House 8</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Grade</ion-label>
+            <ion-select required>
+              <ion-select-option>7</ion-select-option>
+              <ion-select-option>8</ion-select-option>
+              <ion-select-option>9</ion-select-option>
+              <ion-select-option>10</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-item-sliding>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider sticky>
+          <ion-label>
+            Time & Date of Departure & Arrival
+          </ion-label>
+        </ion-item-divider>
+
+        <ion-item-sliding>
+          <ion-item>
+            <ion-label position="stacked">Departure Time</ion-label>
+            <ion-datetime displayFormat="HH:mm" ></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Departure Date</ion-label>
+            <ion-datetime  [dayShortNames]="customDayShortNames"
+                           displayFormat="DDD. MMM DD"
+                           monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Arrival Time</ion-label>
+            <ion-datetime displayFormat="HH:mm" ></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Arrival Date</ion-label>
+            <ion-datetime [dayShortNames]="customDayShortNames"
+                           displayFormat="DDD. MMM DD"
+                           monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+          </ion-item>
+        </ion-item-sliding>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider sticky>
+        <ion-label>
+          Parent's Information
+        </ion-label>
+      </ion-item-divider>
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label position="stacked">Parent's Name</ion-label>
+          <ion-input type="text" required autocomplete="on"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input type="email" required inputmode="email" autocomplete="on"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Phone</ion-label>
+          <ion-input type="phone" required inputmode="phone" autocomplete="on"></ion-input>
+        </ion-item>
+
+      </ion-item-sliding>
+    </ion-item-group>
+    <ion-item-group>
+      <ion-item-divider sticky>
+        <ion-label>
+          Others
+        </ion-label>
+      </ion-item-divider>
+      <ion-item-sliding>
+        <ion-item>
+          <ion-label position="stacked">Address</ion-label>
+          <ion-input required autocomplete="on"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Transport</ion-label>
+          <ion-input required autocomplete="on"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Reason</ion-label>
+          <ion-textarea required></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-button type="submit">Submit</ion-button>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-item-group>
+  </ion-list>
+  </form>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab  >
+    <ion-fab-button>
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="vimeo" (click)="openSocial('Vimeo', fab)">
+        <ion-icon name="logo-vimeo"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="google" (click)="openSocial('Google+', fab)">
+        <ion-icon name="logo-googleplus"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="twitter" (click)="openSocial('Twitter', fab)">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="facebook" (click)="openSocial('Facebook', fab)">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+    </ion-slide>
+    <ion-slide>
+      <form>
+        <ion-title>Holiday Exeat</ion-title>
+        <ion-list #scheduleList>
+          <ion-item-group>
+            <ion-item-divider sticky>
+              <ion-label>
+                About student
+              </ion-label>
+            </ion-item-divider>
+
+            <ion-item-sliding #slidingItem >
+              <ion-list lines="full" class="ion-no-margin ion-no-padding">
+                <ion-item>
+                  <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
+                  <ion-input autocomplete="on" required type="text"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="stacked">Last Name</ion-label>
+                  <ion-input autocomplete="on" required type="text"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="stacked">House</ion-label>
+                  <ion-select required>
+                    <ion-select-option>House 1</ion-select-option>
+                    <ion-select-option>House 2</ion-select-option>
+                    <ion-select-option>House 3</ion-select-option>
+                    <ion-select-option>House 4</ion-select-option>
+                    <ion-select-option>House 5</ion-select-option>
+                    <ion-select-option>House 6</ion-select-option>
+                    <ion-select-option>House 7</ion-select-option>
+                    <ion-select-option>House 8</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="stacked">Grade</ion-label>
+                  <ion-select required>
+                    <ion-select-option>7</ion-select-option>
+                    <ion-select-option>8</ion-select-option>
+                    <ion-select-option>9</ion-select-option>
+                    <ion-select-option>10</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+            </ion-item-sliding>
+          </ion-item-group>
+          <ion-item-group>
+            <ion-item-divider sticky>
+              <ion-label>
+                Time & Date of Departure & Arrival
+              </ion-label>
+            </ion-item-divider>
+
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label position="stacked">Departure Time</ion-label>
+                <ion-datetime displayFormat="HH:mm" ></ion-datetime>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Departure Date</ion-label>
+                <ion-datetime  [dayShortNames]="customDayShortNames"
+                               displayFormat="DDD. MMM DD"
+                               monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Arrival Time</ion-label>
+                <ion-datetime displayFormat="HH:mm" ></ion-datetime>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Arrival Date</ion-label>
+                <ion-datetime [dayShortNames]="customDayShortNames"
+                              displayFormat="DDD. MMM DD"
+                              monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
+              </ion-item>
+            </ion-item-sliding>
+          </ion-item-group>
+          <ion-item-group>
+            <ion-item-divider sticky>
+              <ion-label>
+                Parent's Information
+              </ion-label>
+            </ion-item-divider>
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label position="stacked">Parent's Name</ion-label>
+                <ion-input type="text" required autocomplete="on"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Email</ion-label>
+                <ion-input type="email" required inputmode="email" autocomplete="on"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Phone</ion-label>
+                <ion-input type="phone" required inputmode="phone" autocomplete="on"></ion-input>
+              </ion-item>
+
+            </ion-item-sliding>
+          </ion-item-group>
+          <ion-item-group>
+            <ion-item-divider sticky>
+              <ion-label>
+                Others
+              </ion-label>
+            </ion-item-divider>
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label position="stacked">Address</ion-label>
+                <ion-input required autocomplete="on"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Transport</ion-label>
+                <ion-input required autocomplete="on"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="stacked">Reason</ion-label>
+                <ion-textarea required></ion-textarea>
+              </ion-item>
+              <ion-item>
+                <ion-button type="submit">Submit</ion-button>
+              </ion-item>
+            </ion-item-sliding>
+          </ion-item-group>
+        </ion-list>
+      </form>
+      <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab  >
+        <ion-fab-button>
+          <ion-icon name="share"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <ion-fab-button color="vimeo" (click)="openSocial('Vimeo', fab)">
+            <ion-icon name="logo-vimeo"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="google" (click)="openSocial('Google+', fab)">
+            <ion-icon name="logo-googleplus"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="twitter" (click)="openSocial('Twitter', fab)">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="facebook" (click)="openSocial('Facebook', fab)">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
