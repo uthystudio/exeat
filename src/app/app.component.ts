@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, Inject, OnInit, ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
 import { SwUpdate } from '@angular/service-worker';
 
@@ -10,6 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Storage } from '@ionic/storage';
 
 import { UserData } from './providers/user-data';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -39,6 +40,7 @@ export class AppComponent implements OnInit {
   dark = false;
 
   constructor(
+    @Inject(DOCUMENT) private _document: HTMLDocument,
     private events: Events,
     private menu: MenuController,
     private platform: Platform,
@@ -117,5 +119,15 @@ export class AppComponent implements OnInit {
     this.menu.enable(false);
     this.storage.set('ion_did_tutorial', false);
     this.router.navigateByUrl('/tutorial');
+  }
+
+  changeIcon() {
+    if (this._document.getElementById('appFavicon').getAttribute('href') === 'assets/img/appicon.png') {
+      this._document.getElementById('appTheme').setAttribute('content', '#2cb36d');
+      this._document.getElementById('appFavicon').setAttribute('href', 'assets/img/favicon.png');
+    } else {
+      this._document.getElementById('appFavicon').setAttribute('href', 'assets/img/appicon.png');
+      this._document.getElementById('appTheme').setAttribute('content', '#1a8ed7');
+    }
   }
 }

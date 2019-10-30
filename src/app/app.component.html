@@ -39,15 +39,6 @@
           </ion-menu-toggle>
 
           <ion-menu-toggle autoHide="false">
-            <ion-item routerLink="/support" routerDirection="root">
-              <ion-icon slot="start" name="help"></ion-icon>
-              <ion-label>
-                Support
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-
-          <ion-menu-toggle autoHide="false">
             <ion-item button (click)="logout()">
               <ion-icon slot="start" name="log-out"></ion-icon>
               <ion-label>
@@ -87,7 +78,7 @@
             <ion-label>
               Dark Theme
             </ion-label>
-            <ion-toggle [(ngModel)]="dark"></ion-toggle>
+            <ion-toggle (click)="changeIcon()" [(ngModel)]="dark"></ion-toggle>
           </ion-item>
         </ion-list>
       </ion-content>

@@ -13,6 +13,7 @@ import { UserData } from '../../providers/user-data';
 })
 export class AccountPage implements AfterViewInit {
   username: string;
+  srcimg: string;
 
   constructor(
     public alertCtrl: AlertController,
@@ -24,8 +25,29 @@ export class AccountPage implements AfterViewInit {
     this.getUsername();
   }
 
-  updatePicture() {
-    console.log('Clicked to update picture');
+  async updatePicture() {
+    const alert = await this.alertCtrl.create({
+      header: 'Change Picture',
+      buttons: [
+        'Cancel',
+        {
+          text: 'Ok',
+          handler: (data: any) => {
+            this.userData.setPicture(data.srcimg);
+            this.getPicture();
+          }
+        }
+      ],
+      inputs: [
+        {
+          type: 'text',
+          name: 'image',
+          value: this.srcimg,
+          placeholder: 'Image URL'
+        }
+      ]
+    });
+    await alert.present();
   }
 
   // Present an alert with the current username populated
@@ -59,6 +81,11 @@ export class AccountPage implements AfterViewInit {
   getUsername() {
     this.userData.getUsername().then((username) => {
       this.username = username;
+    });
+  }
+  getPicture() {
+    this.userData.getPicture().then((srcimg) => {
+      this.srcimg = srcimg;
     });
   }
 

@@ -6,9 +6,8 @@
     <ion-title>Exeats Generator</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-slides>
+  <ion-slides style="margin-top: 30px;" #slidesexeats>
     <ion-slide>
       <form>
         <ion-title>Weekend Exeat</ion-title>
@@ -23,7 +22,7 @@
       <ion-item-sliding #slidingItem >
         <ion-list lines="full" class="ion-no-margin ion-no-padding">
           <ion-item>
-            <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
+            <ion-label position="stacked">First Name</ion-label>
             <ion-input autocomplete="on" required type="text"></ion-input>
           </ion-item>
 
@@ -128,32 +127,16 @@
           <ion-label position="stacked">Reason</ion-label>
           <ion-textarea required></ion-textarea>
         </ion-item>
-        <ion-item>
-          <ion-button type="submit">Submit</ion-button>
-        </ion-item>
       </ion-item-sliding>
     </ion-item-group>
+          <ion-item-group>
+            <ion-item-divider></ion-item-divider>
+            <ion-item>
+              <ion-button type="submit">Submit</ion-button>
+            </ion-item>
+          </ion-item-group>
   </ion-list>
   </form>
-  <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab  >
-    <ion-fab-button>
-      <ion-icon name="share"></ion-icon>
-    </ion-fab-button>
-    <ion-fab-list side="top">
-      <ion-fab-button color="vimeo" (click)="openSocial('Vimeo', fab)">
-        <ion-icon name="logo-vimeo"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button color="google" (click)="openSocial('Google+', fab)">
-        <ion-icon name="logo-googleplus"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button color="twitter" (click)="openSocial('Twitter', fab)">
-        <ion-icon name="logo-twitter"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-button color="facebook" (click)="openSocial('Facebook', fab)">
-        <ion-icon name="logo-facebook"></ion-icon>
-      </ion-fab-button>
-    </ion-fab-list>
-  </ion-fab>
     </ion-slide>
     <ion-slide>
       <form>
@@ -169,7 +152,7 @@
             <ion-item-sliding #slidingItem >
               <ion-list lines="full" class="ion-no-margin ion-no-padding">
                 <ion-item>
-                  <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
+                  <ion-label position="stacked">First Name</ion-label>
                   <ion-input autocomplete="on" required type="text"></ion-input>
                 </ion-item>
 
@@ -274,32 +257,16 @@
                 <ion-label position="stacked">Reason</ion-label>
                 <ion-textarea required></ion-textarea>
               </ion-item>
+            </ion-item-sliding>
+          </ion-item-group>
+          <ion-item-group>
+            <ion-item-divider></ion-item-divider>
               <ion-item>
                 <ion-button type="submit">Submit</ion-button>
               </ion-item>
-            </ion-item-sliding>
           </ion-item-group>
         </ion-list>
       </form>
-      <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab  >
-        <ion-fab-button>
-          <ion-icon name="share"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-list side="top">
-          <ion-fab-button color="vimeo" (click)="openSocial('Vimeo', fab)">
-            <ion-icon name="logo-vimeo"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button color="google" (click)="openSocial('Google+', fab)">
-            <ion-icon name="logo-googleplus"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button color="twitter" (click)="openSocial('Twitter', fab)">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button color="facebook" (click)="openSocial('Facebook', fab)">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
     </ion-slide>
   </ion-slides>
 </ion-content>

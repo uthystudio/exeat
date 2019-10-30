@@ -2,134 +2,24 @@
 
   "speakers": [
     {
-      "name": "Burt Bear",
-      "profilePic": "assets/img/speakers/bear.jpg",
+      "name": "Dian Rialey",
+      "profilePic": "https://letovo.ru/upload/iblock/d57/%D0%94%D0%B0%D0%B9%D0%B0%D0%BD.jpg",
       "twitter": "ionicframework",
-      "about": "Burt is a Bear.",
-      "location": "Everywhere",
+      "about": "Имеет многолетний опыт работы в школах-пансионах, является одним из немногих аккредитованных экспертов четвертого уровня Ассоциации школ-пансионов Великобритании. Задача Дайан и всех сотрудников пансиона – сделать все для того, чтобы проживание в пансионе помогало детям в учебе и достижении заветных желаний.",
+      "location": "Boarding",
       "email": "burt@example.com",
       "phone": "+1-541-754-3010",
       "id": "1"
     },
     {
-      "name": "Charlie Cheetah",
-      "profilePic": "assets/img/speakers/cheetah.jpg",
+      "name": "Keith Borg",
+      "profilePic": "https://i.ytimg.com/vi/0B1TKII5dj8/hqdefault.jpg",
       "twitter": "ionicframework",
-      "about": "Charlie is a Cheetah.",
-      "location": "Everywhere",
-      "email": "charlie@example.com",
+      "about": "Born in Malta in 1984, Keith Borg graduated from the Communications Faculty of the University of Malta. He finished a Masters in Literary Tradition and Popular Culture and is currently working as a Housemaster at Letovo School in Moscow, Russia. He has been writing for the past nine years and took part in various literature nights, including the XV edition of the BJCEM in Rome (2011) and the World Event Young Artists in Nottingham (2012). He participated in a translation workshop held in Dane, Slovenia. (2012) He studied drama with Lemonhead Productions and sees theatre as the physical manifestation of the soul. He looks upon literature as a tool to understand the world around him, first of all himself, and to instigate discussion. He published his first poetry book, 'hemm qarsa fil-vers', in 2018. He is an active member of Inizjamed who organise the yearly Malta Mediterranean Literature Festival.",
+      "location": "Boarding",
+      "email": "linkedin.com/in/keith-borg-a3b4537b",
       "phone": "+1-541-754-3010",
       "id": "2"
-    },
-    {
-      "name": "Donald Duck",
-      "profilePic": "assets/img/speakers/duck.jpg",
-      "twitter": "ionicframework",
-      "about": "Donald is a Duck.",
-      "location": "Everywhere",
-      "email": "donald@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "3"
-    },
-    {
-      "name": "Eva Eagle",
-      "profilePic": "assets/img/speakers/eagle.jpg",
-      "twitter": "ionicframework",
-      "about": "Eva is an Eagle.",
-      "location": "Everywhere",
-      "email": "eva@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "4"
-    },
-    {
-      "name": "Ellie Elephant",
-      "profilePic": "assets/img/speakers/elephant.jpg",
-      "twitter": "ionicframework",
-      "about": "Ellie is an Elephant.",
-      "location": "Everywhere",
-      "email": "ellie@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "5"
-    },
-    {
-      "name": "Gino Giraffe",
-      "profilePic": "assets/img/speakers/giraffe.jpg",
-      "twitter": "ionicframework",
-      "about": "Gino is a Giraffe.",
-      "location": "Everywhere",
-      "email": "gino@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "6"
-    },
-    {
-      "name": "Isabella Iguana",
-      "profilePic": "assets/img/speakers/iguana.jpg",
-      "twitter": "ionicframework",
-      "about": "Isabella is an Iguana.",
-      "location": "Everywhere",
-      "email": "isabella@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "7"
-    },
-    {
-      "name": "Karl Kitten",
-      "profilePic": "assets/img/speakers/kitten.jpg",
-      "twitter": "ionicframework",
-      "about": "Karl is a Kitten.",
-      "location": "Everywhere",
-      "email": "karl@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "8"
-    },
-    {
-      "name": "Lionel Lion",
-      "profilePic": "assets/img/speakers/lion.jpg",
-      "twitter": "ionicframework",
-      "about": "Lionel is a Lion.",
-      "location": "Everywhere",
-      "email": "lionel@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "9"
-    },
-    {
-      "name": "Molly Mouse",
-      "profilePic": "assets/img/speakers/mouse.jpg",
-      "twitter": "ionicframework",
-      "about": "Molly is a Mouse.",
-      "location": "Everywhere",
-      "email": "molly@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "10"
-    },
-    {
-      "name": "Paul Puppy",
-      "profilePic": "assets/img/speakers/puppy.jpg",
-      "twitter": "ionicframework",
-      "about": "Paul is a Puppy.",
-      "location": "Everywhere",
-      "email": "paul@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "11"
-    },
-    {
-      "name": "Rachel Rabbit",
-      "profilePic": "assets/img/speakers/rabbit.jpg",
-      "twitter": "ionicframework",
-      "about": "Rachel is a Rabbit.",
-      "location": "Everywhere",
-      "email": "rachel@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "12"
-    },
-    {
-      "name": "Ted Turtle",
-      "profilePic": "assets/img/speakers/turtle.jpg",
-      "twitter": "ionicframework",
-      "about": "Ted is a Turtle.",
-      "location": "Everywhere",
-      "email": "ted@example.com",
-      "phone": "+1-541-754-3010",
-      "id": "13"
     }
   ],
 

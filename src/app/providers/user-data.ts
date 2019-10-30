@@ -41,6 +41,7 @@ export class UserData {
   signup(username: string): Promise<any> {
     return this.storage.set(this.HAS_LOGGED_IN, true).then(() => {
       this.setUsername(username);
+      this.setPicture('https://autoiwc.ru/images/aston-martin/aston-martin-vanquish_1.jpg');
       return this.events.publish('user:signup');
     });
   }
@@ -56,9 +57,17 @@ export class UserData {
   setUsername(username: string): Promise<any> {
     return this.storage.set('username', username);
   }
+  setPicture(srcimg: string): Promise<any> {
+    return this.storage.set('srcimg', srcimg);
+  }
 
   getUsername(): Promise<string> {
     return this.storage.get('username').then((value) => {
+      return value;
+    });
+  }
+  getPicture(): Promise<string> {
+    return this.storage.get('srcimg').then((value) => {
       return value;
     });
   }
