@@ -28,7 +28,7 @@ export class ConferenceData {
     // build up the data by linking speakers to sessions
     this.data = data;
 
-    // loop through each day in the schedule
+    // loop through each day in the exeat
     this.data.schedule.forEach((day: any) => {
       // loop through each timeline group in the day
       day.groups.forEach((group: any) => {

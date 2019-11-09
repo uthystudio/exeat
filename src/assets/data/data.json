@@ -4,41 +4,62 @@
     {
       "name": "Dian Rialey",
       "profilePic": "https://letovo.ru/upload/iblock/d57/%D0%94%D0%B0%D0%B9%D0%B0%D0%BD.jpg",
-      "twitter": "ionicframework",
+      "likes": 0,
       "about": "Имеет многолетний опыт работы в школах-пансионах, является одним из немногих аккредитованных экспертов четвертого уровня Ассоциации школ-пансионов Великобритании. Задача Дайан и всех сотрудников пансиона – сделать все для того, чтобы проживание в пансионе помогало детям в учебе и достижении заветных желаний.",
-      "location": "Boarding",
-      "email": "burt@example.com",
-      "phone": "+1-541-754-3010",
+      "location": "DSL",
+      "email": "diane.riley@letovo.ru",
+      "phone": "+79998451928",
       "id": "1"
     },
     {
       "name": "Keith Borg",
       "profilePic": "https://i.ytimg.com/vi/0B1TKII5dj8/hqdefault.jpg",
-      "twitter": "ionicframework",
+      "likes": 2,
       "about": "Born in Malta in 1984, Keith Borg graduated from the Communications Faculty of the University of Malta. He finished a Masters in Literary Tradition and Popular Culture and is currently working as a Housemaster at Letovo School in Moscow, Russia. He has been writing for the past nine years and took part in various literature nights, including the XV edition of the BJCEM in Rome (2011) and the World Event Young Artists in Nottingham (2012). He participated in a translation workshop held in Dane, Slovenia. (2012) He studied drama with Lemonhead Productions and sees theatre as the physical manifestation of the soul. He looks upon literature as a tool to understand the world around him, first of all himself, and to instigate discussion. He published his first poetry book, 'hemm qarsa fil-vers', in 2018. He is an active member of Inizjamed who organise the yearly Malta Mediterranean Literature Festival.",
-      "location": "Boarding",
-      "email": "linkedin.com/in/keith-borg-a3b4537b",
-      "phone": "+1-541-754-3010",
+      "location": "DSP",
+      "email": "keith.borg@letovo.ru",
+      "phone": "+79660800390",
       "id": "2"
-    }
-  ],
-
-  "map": [
-    {
-      "name": "Monona Terrace Convention Center",
-      "lat": 43.071584,
-      "lng": -89.38012,
-      "center": true
     },
     {
-      "name": "Ionic HQ",
-      "lat": 43.074395,
-      "lng": -89.381056
+      "name": "Michelle Borg Bonnici",
+      "profilePic": "https://i.ytimg.com/vi/0B1TKII5dj8/hqdefault.jpg",
+      "likes": 2,
+      "about": "",
+      "location": "DSP",
+      "email": "michelle.bonnici@letovo.ru",
+      "phone": "+79660800393",
+      "id": "3"
     },
     {
-      "name": "Afterparty - Brocach Irish Pub",
-      "lat": 43.07336,
-      "lng": -89.38335
+      "name": "Ivan Koshevoy",
+      "profilePic": "https://i.ibb.co/yRdry5r/screenshot-www-youtube-com-2019-11-04-20-32-58.png",
+      "likes": 2,
+      "about": "Nothing here. You can write information about this housemaster to support.",
+      "location": "DSP",
+      "email": "ivan.koshevoy@letovo.ru",
+      "phone": "+79015994444",
+      "id": "4"
+    },
+    {
+      "name": "Katherine Broadhurst",
+      "profilePic": "https://i.ytimg.com/vi/0B1TKII5dj8/hqdefault.jpg",
+      "likes": 2,
+      "about": "Born in Malta in 1984, Keith Borg graduated from the Communications Faculty of the University of Malta. He finished a Masters in Literary Tradition and Popular Culture and is currently working as a Housemaster at Letovo School in Moscow, Russia. He has been writing for the past nine years and took part in various literature nights, including the XV edition of the BJCEM in Rome (2011) and the World Event Young Artists in Nottingham (2012). He participated in a translation workshop held in Dane, Slovenia. (2012) He studied drama with Lemonhead Productions and sees theatre as the physical manifestation of the soul. He looks upon literature as a tool to understand the world around him, first of all himself, and to instigate discussion. He published his first poetry book, 'hemm qarsa fil-vers', in 2018. He is an active member of Inizjamed who organise the yearly Malta Mediterranean Literature Festival.",
+      "location": "Boarding Team Houses 1&2",
+      "email": "No email",
+      "phone": "+79030109089",
+      "id": "5"
+    },
+    {
+      "name": "Liam Metcalf-White",
+      "profilePic": "https://csarsg.org.uk/wp-content/uploads/2016/06/Liam-metcalf-white-1.jpg",
+      "likes": 1,
+      "about": "Liam Metcalf-White received his BA and MA in Religious Studies from the University of Chester. He is currently an MPhil/PhD candidate in the Sociology of Religion and Graduate Teaching Assistant in the Department of Theology and Religious Studies. He has research interests in religion, spirituality and recovery from addiction, critical theory, gender studies, and qualitative research methods. He has undertaken ethnographic fieldwork on the UK Recovery Walks and within the Visible Recovery Advocacy Movement, and has presented his research at conferences including the British Sociological Association, the British Association for the Study of Religion, and the Faces and Voices of Recovery Annual Conference. Liam is employed on a CSARS Group Mutual-aid Facilitation Recovery Project in North Wales working with people in early-recovery from substance use disorders, and undertakes recovery–experience research projects on behalf of the CSARS team. He is also on the BSA Sociology of Religion Study Group committee as their Internet Officer.",
+      "location": "House 3",
+      "email": "liammetcalf@gmail.com",
+      "phone": "+1-541-754-3010",
+      "id": "6"
     }
   ],
 

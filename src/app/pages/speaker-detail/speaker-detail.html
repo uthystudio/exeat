@@ -9,18 +9,8 @@
 
 <ion-content class="ion-padding speaker-detail">
   <div *ngIf="speaker" class="ion-text-center">
-    <img [src]="speaker.profilePic" [alt]="speaker.name">
+      <img [src]="speaker.profilePic" [alt]="speaker.name">
     <br>
-
-    <ion-button fill="clear" size="small" color="twitter">
-      <ion-icon name="logo-twitter" slot="icon-only"></ion-icon>
-    </ion-button>
-    <ion-button fill="clear" size="small" color="github">
-      <ion-icon name="logo-github" slot="icon-only"></ion-icon>
-    </ion-button>
-    <ion-button fill="clear" size="small" color="instagram">
-      <ion-icon name="logo-instagram" slot="icon-only"></ion-icon>
-    </ion-button>
   </div>
 
   <p>{{speaker?.about}}</p>

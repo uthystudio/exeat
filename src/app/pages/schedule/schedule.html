@@ -1,15 +1,15 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Exeats Generator</ion-title>
+    <ion-title>Exeats Generator<b style="margin-left: 10px;" (click)="slidesexeats.slideTo(0)"> Weekend</b><b style="margin-left: 10px;" (click)="slidesexeats.slideTo(1)"> Holiday</b></ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
   <ion-slides style="margin-top: 30px;" #slidesexeats>
     <ion-slide>
-      <form>
+      <form (submit)="submit()">
         <ion-title>Weekend Exeat</ion-title>
         <ion-list #scheduleList>
     <ion-item-group>
@@ -23,17 +23,17 @@
         <ion-list lines="full" class="ion-no-margin ion-no-padding">
           <ion-item>
             <ion-label position="stacked">First Name</ion-label>
-            <ion-input autocomplete="on" required type="text"></ion-input>
+            <ion-input autocomplete="on" required type="text" id="name"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label position="stacked">Last Name</ion-label>
-            <ion-input autocomplete="on" required type="text"></ion-input>
+            <ion-input autocomplete="on" required type="text" id="surname"></ion-input>
           </ion-item>
 
           <ion-item>
             <ion-label position="stacked">House</ion-label>
-            <ion-select required>
+            <ion-select id="house">
               <ion-select-option>House 1</ion-select-option>
               <ion-select-option>House 2</ion-select-option>
               <ion-select-option>House 3</ion-select-option>
@@ -46,7 +46,7 @@
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Grade</ion-label>
-            <ion-select required>
+            <ion-select id="grade">
               <ion-select-option>7</ion-select-option>
               <ion-select-option>8</ion-select-option>
               <ion-select-option>9</ion-select-option>
@@ -66,21 +66,21 @@
         <ion-item-sliding>
           <ion-item>
             <ion-label position="stacked">Departure Time</ion-label>
-            <ion-datetime displayFormat="HH:mm" ></ion-datetime>
+            <ion-datetime displayFormat="HH:mm" id="deptime"></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Departure Date</ion-label>
-            <ion-datetime  [dayShortNames]="customDayShortNames"
+            <ion-datetime id="depdate" [dayShortNames]="customDayShortNames"
                            displayFormat="DDD. MMM DD"
                            monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Arrival Time</ion-label>
-            <ion-datetime displayFormat="HH:mm" ></ion-datetime>
+            <ion-datetime id="arrtime" displayFormat="HH:mm" ></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">Arrival Date</ion-label>
-            <ion-datetime [dayShortNames]="customDayShortNames"
+            <ion-datetime id="arrdate" [dayShortNames]="customDayShortNames"
                            displayFormat="DDD. MMM DD"
                            monthShortNames="jan, feb, mar, apr, mai, jun, jul, aug, sep, okt, nov, des"></ion-datetime>
           </ion-item>
@@ -95,15 +95,15 @@
       <ion-item-sliding>
         <ion-item>
           <ion-label position="stacked">Parent's Name</ion-label>
-          <ion-input type="text" required autocomplete="on"></ion-input>
+          <ion-input id="parname" type="text" required autocomplete="on"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Email</ion-label>
-          <ion-input type="email" required inputmode="email" autocomplete="on"></ion-input>
+          <ion-input id="email" type="email" required autocomplete="on"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Phone</ion-label>
-          <ion-input type="phone" required inputmode="phone" autocomplete="on"></ion-input>
+          <ion-input id="phone" type="phone" required autocomplete="on"></ion-input>
         </ion-item>
 
       </ion-item-sliding>
@@ -117,15 +117,15 @@
       <ion-item-sliding>
         <ion-item>
           <ion-label position="stacked">Address</ion-label>
-          <ion-input required autocomplete="on"></ion-input>
+          <ion-input id="address" required autocomplete="on"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Transport</ion-label>
-          <ion-input required autocomplete="on"></ion-input>
+          <ion-input id="transport" required autocomplete="on"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Reason</ion-label>
-          <ion-textarea required></ion-textarea>
+          <ion-textarea id="reason" required></ion-textarea>
         </ion-item>
       </ion-item-sliding>
     </ion-item-group>
@@ -133,6 +133,9 @@
             <ion-item-divider></ion-item-divider>
             <ion-item>
               <ion-button type="submit">Submit</ion-button>
+            </ion-item>
+            <ion-item>
+              <ion-text style="text-align: center">By Submitting you accept the <a>rules</a></ion-text>
             </ion-item>
           </ion-item-group>
   </ion-list>
@@ -262,8 +265,11 @@
           <ion-item-group>
             <ion-item-divider></ion-item-divider>
               <ion-item>
-                <ion-button type="submit">Submit</ion-button>
+                <ion-button (click)="submit()" type="submit">Submit</ion-button>
               </ion-item>
+            <ion-item>
+              <ion-text style="text-align: center">By Submitting you accept the <a>rules</a></ion-text>
+            </ion-item>
           </ion-item-group>
         </ion-list>
       </form>

@@ -54,4 +54,17 @@ export class SchedulePage implements OnInit {
     await loading.onWillDismiss();
     await fab.close();
   }
+
+  async submit() {
+    // tslint:disable-next-line:max-line-length
+    if (document.getElementById('name').innerText !== '' && document.getElementById('surname') !== null && document.getElementById('grade') !== null && document.getElementById('house') !== null && document.getElementById('deptime') !== null  && document.getElementById('depdate') !== null  && document.getElementById('arrdate') !== null  && document.getElementById('arrtime') !== null  && document.getElementById('parname') !== null && document.getElementById('email') !== null && document.getElementById('phone') !== null && document.getElementById('address') !== null && document.getElementById('transport') !== null && document.getElementById('reason') !== null) {
+      const alert = await this.alertCtrl.create({
+        header: 'We\' have sent an email with the verification link to your parent\'s email.',
+        buttons: [
+          'Ok'
+        ]
+      });
+      await alert.present();
+    }
+  }
 }

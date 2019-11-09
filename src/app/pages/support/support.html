@@ -9,14 +9,34 @@
 </ion-header>
 
 <ion-content>
+  <ion-item-group>
+    <ion-item-divider><b>First see FAQ...</b></ion-item-divider>
+    <ion-item-sliding>
+  <ion-list>
+    <ion-item>
+      <p><b>How can I complete holiday exeat form?</b> Easily, just go Exeat => Holiday. If you use this site from phone you can just swipe to the left in the "Exeat" tab.</p>
+    </ion-item>
+    <ion-item>
+      <p><b>How can I contact to the housemaster?</b> Go to the "Housemasters" page, choose the housemaster and click "Contact" button, then choose "Email" or "Phone" option and click it.</p>
+    </ion-item>
+    <ion-item>
+      <p><b>I have problems with logging in, or I have forgot my password. What should I do?</b> First contact feironox5@gmail.com and ask to receive your password, or enter the same message below.</p>
+    </ion-item>
+  </ion-list>
+    </ion-item-sliding>
+    <ion-item-divider><b>If you haven't found you problem write it here</b></ion-item-divider>
+    <ion-item-sliding>
   <form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
     <ion-list lines="none">
       <ion-item>
         <ion-label position="stacked" color="primary">Enter your support message below</ion-label>
+        <ion-select placeholder="Choose one of the options">
+          <ion-select-option>I have got a problem</ion-select-option>
+          <ion-select-option>I have got an idea</ion-select-option>
+        </ion-select>
         <ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="6" required></ion-textarea>
       </ion-item>
     </ion-list>
-
     <ion-text color="danger">
       <p [hidden]="supportQuestion.valid || submitted === false" class="ion-padding-start">
         Support message is required
@@ -27,4 +47,7 @@
       <ion-button expand="block" type="submit">Submit</ion-button>
     </div>
   </form>
+    </ion-item-sliding>
+    <p style="text-align: center"><b>Thanks for using Eexeat!</b></p>
+  </ion-item-group>
 </ion-content>

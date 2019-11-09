@@ -1,17 +1,23 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { ActionSheetController } from '@ionic/angular';
 
 import { ConferenceData } from '../../providers/conference-data';
+import {url} from '@angular-devkit/schematics';
 
 @Component({
   selector: 'page-speaker-list',
   templateUrl: 'speaker-list.html',
   styleUrls: ['./speaker-list.scss'],
 })
-export class SpeakerListPage {
+export class SpeakerListPage implements OnInit{
   speakers: any[] = [];
+  likes = 0;
+
+  ngOnInit() {
+    this.ionViewDidEnter();
+  }
 
   constructor(
     public actionSheetCtrl: ActionSheetController,
@@ -26,13 +32,6 @@ export class SpeakerListPage {
     });
   }
 
-  goToSpeakerTwitter(speaker: any) {
-    this.inAppBrowser.create(
-      `https://twitter.com/${speaker.twitter}`,
-      '_blank'
-    );
-  }
-
   async openSpeakerShare(speaker: any) {
     const actionSheet = await this.actionSheetCtrl.create({
       header: 'Share ' + speaker.name,
@@ -40,21 +39,13 @@ export class SpeakerListPage {
         {
           text: 'Copy Link',
           handler: () => {
-            console.log(
-              'Copy link clicked on https://twitter.com/' + speaker.twitter
-            );
-            if (
-              (window as any)['cordova'] &&
-              (window as any)['cordova'].plugins.clipboard
-            ) {
-              (window as any)['cordova'].plugins.clipboard.copy(
-                'https://twitter.com/' + speaker.twitter
-              );
-            }
+            console.log('quicklyit.000webhostapp.com/app/tabs/speakers/speaker-details/' + speaker.id);
+            document.addEventListener('copy', (e: ClipboardEvent) => {
+              e.clipboardData.setData('text/plain', 'quicklyit.000webhostapp.com/app/tabs/speakers/speaker-details/' + speaker.id);
+              e.preventDefault();
+            });
+            document.execCommand('copy');
           }
-        },
-        {
-          text: 'Share via ...'
         },
         {
           text: 'Cancel',

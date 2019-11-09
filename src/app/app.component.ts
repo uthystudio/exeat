@@ -56,6 +56,12 @@ export class AppComponent implements OnInit {
   }
 
   async ngOnInit() {
+    if (localStorage.getItem('dark') === null) {
+      localStorage.setItem('dark', JSON.stringify(false));
+    }
+    this.dark = JSON.parse(localStorage.getItem('dark'));
+    this.changeIconOnStart();
+    this.changeIcon();
     this.checkLoginStatus();
     this.listenForLoginEvents();
 
@@ -74,6 +80,7 @@ export class AppComponent implements OnInit {
         .then(() => this.swUpdate.activateUpdate())
         .then(() => window.location.reload());
     });
+    this.saveTheme();
   }
 
   initializeApp() {
@@ -111,7 +118,7 @@ export class AppComponent implements OnInit {
 
   logout() {
     this.userData.logout().then(() => {
-      return this.router.navigateByUrl('/app/tabs/schedule');
+      return this.router.navigateByUrl('/app/tabs/exeat');
     });
   }
 
@@ -123,6 +130,18 @@ export class AppComponent implements OnInit {
 
   changeIcon() {
     if (this._document.getElementById('appFavicon').getAttribute('href') === 'assets/img/appicon.png') {
+      this._document.getElementById('appTheme').setAttribute('content', '#2cb36d');
+      this._document.getElementById('appFavicon').setAttribute('href', 'assets/img/favicon.png');
+    } else {
+      this._document.getElementById('appFavicon').setAttribute('href', 'assets/img/appicon.png');
+      this._document.getElementById('appTheme').setAttribute('content', '#1a8ed7');
+    }
+  }
+  saveTheme() {
+    localStorage.setItem('dark', JSON.stringify(this.dark));
+  }
+  changeIconOnStart() {
+    if (this.dark === true) {
       this._document.getElementById('appTheme').setAttribute('content', '#2cb36d');
       this._document.getElementById('appFavicon').setAttribute('href', 'assets/img/favicon.png');
     } else {

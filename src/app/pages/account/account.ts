@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 import { UserData } from '../../providers/user-data';
+import {on} from 'cluster';
 
 
 @Component({
@@ -13,46 +14,18 @@ import { UserData } from '../../providers/user-data';
 })
 export class AccountPage implements AfterViewInit {
   username: string;
+  password: string;
   srcimg: string;
 
   constructor(
     public alertCtrl: AlertController,
     public router: Router,
     public userData: UserData
-  ) { }
+  ) {}
 
   ngAfterViewInit() {
     this.getUsername();
   }
-
-  async updatePicture() {
-    const alert = await this.alertCtrl.create({
-      header: 'Change Picture',
-      buttons: [
-        'Cancel',
-        {
-          text: 'Ok',
-          handler: (data: any) => {
-            this.userData.setPicture(data.srcimg);
-            this.getPicture();
-          }
-        }
-      ],
-      inputs: [
-        {
-          type: 'text',
-          name: 'image',
-          value: this.srcimg,
-          placeholder: 'Image URL'
-        }
-      ]
-    });
-    await alert.present();
-  }
-
-  // Present an alert with the current username populated
-  // clicking OK will update the username and display it
-  // clicking Cancel will close the alert and do nothing
   async changeUsername() {
     const alert = await this.alertCtrl.create({
       header: 'Change Username',
@@ -71,7 +44,7 @@ export class AccountPage implements AfterViewInit {
           type: 'text',
           name: 'username',
           value: this.username,
-          placeholder: 'username'
+          placeholder: 'username',
         }
       ]
     });
@@ -83,15 +56,33 @@ export class AccountPage implements AfterViewInit {
       this.username = username;
     });
   }
-  getPicture() {
-    this.userData.getPicture().then((srcimg) => {
-      this.srcimg = srcimg;
+
+
+  async changePassword() {
+    const alert = await this.alertCtrl.create({
+      header: 'Change Password',
+      buttons: [
+        'Cancel',
+        {
+          text: 'Ok',
+          handler: (data: any) => {
+            this.userData.setUsername(data.username);
+            this.getUsername();
+          }
+        }
+      ],
+      inputs: [
+        {
+          type: 'password',
+          name: 'password',
+          value: this.password,
+          placeholder: 'password',
+        }
+      ]
     });
+    await alert.present();
   }
 
-  changePassword() {
-    console.log('Clicked to change password');
-  }
 
   logout() {
     this.userData.logout();

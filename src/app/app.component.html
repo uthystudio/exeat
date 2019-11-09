@@ -78,7 +78,7 @@
             <ion-label>
               Dark Theme
             </ion-label>
-            <ion-toggle (click)="changeIcon()" [(ngModel)]="dark"></ion-toggle>
+            <ion-toggle (click)="changeIcon(); saveTheme()" (ionChange)="saveTheme()" [(ngModel)]="dark"></ion-toggle>
           </ion-item>
         </ion-list>
       </ion-content>

@@ -16,24 +16,13 @@
   <form #signupForm="ngForm" novalidate>
     <ion-list lines="none">
       <ion-item>
-        <ion-label position="stacked" color="primary">Username</ion-label>
-        <ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required>
-        </ion-input>
-      </ion-item>
+      <ion-label position="stacked" color="primary">Email</ion-label>
+      <ion-input [(ngModel)]="signup.username" name="username" type="email" #username="ngModel" required>
+      </ion-input>
+    </ion-item>
       <ion-text color="danger">
         <p [hidden]="username.valid || submitted == false" class="ion-padding-start">
-          Username is required
-        </p>
-      </ion-text>
-
-      <ion-item>
-        <ion-label position="stacked" color="primary">Password</ion-label>
-        <ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required>
-        </ion-input>
-      </ion-item>
-      <ion-text color="danger">
-        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
-          Password is required
+          Email is required
         </p>
       </ion-text>
     </ion-list>
@@ -43,4 +32,7 @@
     </div>
   </form>
 
+  <ion-item>
+    We'll send email with verification link. Click it and enter your password.
+  </ion-item>
 </ion-content>

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -9,15 +9,17 @@
 
 <ion-content>
   <div *ngIf="username" class="ion-padding-top ion-text-center">
-    <img src="{{srcimg}}" alt="avatar">
+    <img src="https://www.gravatar.com/avatar?d=mm&s=140" alt="avatar">
     <h2>{{username}}</h2>
 
     <ion-list inset>
-      <ion-item (click)="updatePicture()">Update Picture</ion-item>
       <ion-item (click)="changeUsername()">Change Username</ion-item>
       <ion-item (click)="changePassword()">Change Password</ion-item>
+      <ion-item (click)="getUsername()">Update Data</ion-item>
       <ion-item (click)="support()">Support</ion-item>
       <ion-item (click)="logout()">Logout</ion-item>
     </ion-list>
   </div>
+  <p style="text-align: center"><b>Thanks for using Eexeat!</b></p>
+
 </ion-content>
